@@ -29,21 +29,26 @@
   .text-color-pink{
       color: rgba(224, 44, 109, 1);
   }
+  /* Font Family */
 .Poppins{
         font-family: "Poppins", serif;
         font-weight: 700;
         font-style: normal;
 }
+
 .Brand{
      font-size: 1.5rem;
      font-weight: 700;
 }
+/* Navigation */
 .navbar{
     justify-content: space-between;
     align-items: center;
     margin: 0  auto;
+    padding: 10px;
 }
-.nav-items, .nav-links {
+.nav-items,
+ .nav-links {
     list-style: none;
     gap: 34px;
 }
@@ -58,12 +63,9 @@
 }
 .Banner-content{
      max-width: 582px;
-     margin: 0px 133px 0px 0px;
+    margin-right: 133px;
      text-align: left;
-     
-     /*margin-bottom: 50px;*/
 }
-
 .btn-icon{
     margin-left: 8px;
 }
@@ -86,14 +88,15 @@
     border-radius: 50%;
     margin-bottom: 100px;
 }
+/* Sponsor Companies */
 .sponsor-companies{
-    
-    gap: 60px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    gap: 60px;
+    margin: 0 auto;
+   
 }
-
+/* Products Section */
 .Products-title{
     text-align: center;
     font-size: 1.75rem;
@@ -102,8 +105,6 @@
    margin-top: 100px;
 }
 .Product-collection{
-    
-    height: 1702px;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -112,17 +113,16 @@
 
 }
 .Products{
-    width: 329px;
-    height: auto;
+    width: 100%;
+    max-width: 329px;
      border: 1px solid rgb(120, 169, 228);
     box-shadow:  rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 17px 15px;
-  
+    margin: 0 auto;
 }
 .Products-img{
-width: 100%;
-
+    width: 100%;
     border-radius: 5px;
 }
 .Products-name{
@@ -130,7 +130,7 @@ width: 100%;
     margin-top: 16px;
     font-weight: 600;
     color: rgba(24, 25, 31, 1);
-    margin-bottom:0px;
+   
 }
 .Products-price{
     font-size: 1.5rem;
@@ -157,8 +157,9 @@ width: 100%;
     gap: 8px;
     margin-left: auto;
     display: block;
-    
+    margin-top: 10px;
 }
+
 .Featured-products{
     gap: 96px;
     width: 1110px;
@@ -198,8 +199,8 @@ width: 100%;
  background-color: rgb(15, 15, 79);
  color: rgb(255, 255, 255);
  text-align: center;
-padding-top: 50px;
-padding-bottom: 50px;
+padding: 50px 0;
+
  align-items: center;
  justify-items: center;
 }
@@ -227,46 +228,49 @@ padding-bottom: 50px;
    .Banner-content,
    .sponsor-companies {
     flex-direction: column;
+    text-align: center;
    }
- 
+   .sponsor-companies{
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+   }
+   .Products-title {
+    font-size: 1.25rem;
 }
 
-/*@media screen and (max-width: 576px) {
-    .navbar, 
-    .nav-links,
-    .feature,
-    .team {
-       flex-direction: column;
-    }   
-    .team-img-container,
-     .facts-container,
-     .sponsor-companies {
-       grid-template-columns: repeat(1 , 1fr);
-     }
-     .facts-container, .sponsor-companies{
-       justify-items: center;
-       gap: 50px;
-     }
-     .our-features{
-       margin-left: 20px;
-   }
-   #experience-badge{
-       margin-left: 20px;
-       margin-top: 20px;
-   }
-   }*/
-       
-   /*medium devise responsive*/
-   /*@media screen and (min-width:576px) and (max-width:992px){
-       .team, .feature{
-           flex-direction: column;
-       }
-       .our-features{
-           margin-left: 50px auto;
-       }
-       .sponsor-companies,  .facts-container{
-           grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            justify-items: center;
-          }
-   }*/
+.Product-collection {
+    grid-template-columns: 1fr;
+}
+
+.Products {
+    max-width: 90%;
+}
+
+.Banner-title {
+    font-size: 2rem;
+}
+
+.Banner-description {
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    width: 100%;
+}
+}
+/* Medium Devices (min-width 576px and max-width 992px) */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .Product-collection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Products {
+        max-width: 80%;
+    }
+    
+    .Featured-products {
+        width: 90%;
+        flex-direction: column;
+    }
+}
+
